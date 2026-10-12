@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16
+    environment: { POSTGRES_DB: sccf_dev, POSTGRES_USER: sccf_app, POSTGRES_PASSWORD: changeme }
+    ports: ["5432:5432"]
+    volumes: [sccf_pg_data:/var/lib/postgresql/data]
+volumes: { sccf_pg_data: }

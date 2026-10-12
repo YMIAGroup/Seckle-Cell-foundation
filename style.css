@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --ink: #211D1B;
+  --garnet: #8C1F35;
+  --garnet-deep: #5E1424;
+  --cream: #F7F1E8;
+  --gold: #A9782E;
+  --stone: #6E655F;
+  --line: #E7E0D8;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); color: var(--ink); background: var(--white); line-height: 1.6; font-size: 17px; }
+body.donor-theme { background: var(--cream); }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+header { border-bottom: 1px solid var(--line); background: var(--white); }
+body.donor-theme header { background: var(--cream); border-bottom-color: #E3D5BC; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; flex-wrap: wrap; gap: 12px; }
+.logo { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; display: flex; align-items: center; gap: 10px; }
+.logo-mark { width: 10px; height: 10px; background: var(--garnet); border-radius: 50%; flex-shrink: 0; }
+nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
+nav a { font-size: 0.93rem; color: var(--stone); }
+nav a:hover, nav a.active { color: var(--ink); }
+.nav-cta { background: var(--garnet); color: var(--white) !important; padding: 9px 18px; font-size: 0.9rem; font-weight: 500; }
+.nav-cta:hover { background: var(--garnet-deep); }
+
+.hero { padding: 88px 0 72px; }
+.hero h1 { font-family: var(--serif); font-weight: 600; font-size: 2.75rem; line-height: 1.18; max-width: 640px; margin-bottom: 22px; }
+.hero p.lede { font-size: 1.15rem; color: var(--stone); max-width: 560px; margin-bottom: 32px; }
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+.btn { display: inline-block; padding: 13px 26px; font-size: 0.95rem; font-weight: 500; border: 1px solid var(--ink); }
+.btn-primary { background: var(--garnet); border-color: var(--garnet); color: var(--white); }
+.btn-primary:hover { background: var(--garnet-deep); border-color: var(--garnet-deep); }
+.btn-quiet { color: var(--ink); }
+.btn-quiet:hover { color: var(--garnet); }
+
+section { padding: 64px 0; border-top: 1px solid var(--line); }
+body.donor-theme section { border-top-color: #E3D5BC; }
+section.first { border-top: none; }
+h2 { font-family: var(--serif); font-weight: 600; font-size: 1.9rem; margin-bottom: 12px; max-width: 640px; }
+.section-lede { color: var(--stone); max-width: 560px; margin-bottom: 40px; }
+
+.rule-list { list-style: none; }
+.rule-list li { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 200px 1fr; gap: 32px; }
+body.donor-theme .rule-list li { border-top-color: #E3D5BC; }
+.rule-list li:last-child { border-bottom: 1px solid var(--line); }
+body.donor-theme .rule-list li:last-child { border-bottom-color: #E3D5BC; }
+.rule-list h3 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; }
+.rule-list p { color: var(--stone); }
+
+.photo-block { background: var(--ink); color: var(--white); aspect-ratio: 4/3; display: flex; align-items: flex-end; padding: 18px; font-size: 0.85rem; }
+.photo-block.warm { background: var(--garnet); }
+.photo-block.stone { background: var(--stone); }
+
+.stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.stat { border-top: 2px solid var(--garnet); padding-top: 14px; }
+.stat .num { font-family: var(--serif); font-size: 2.1rem; font-weight: 600; display: block; }
+.stat .label { color: var(--stone); font-size: 0.9rem; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+
+.notice { border-left: 3px solid var(--garnet); padding: 20px 24px; background: var(--white); }
+.notice p:first-child { font-weight: 600; margin-bottom: 6px; }
+
+.profile-card { background: var(--white); border: 1px solid var(--line); padding: 32px; max-width: 420px; }
+.profile-card .ref { color: var(--stone); font-size: 0.85rem; margin-bottom: 4px; }
+.profile-card h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 18px; }
+.profile-field { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+.profile-field span:first-child { color: var(--stone); }
+.profile-status { display: inline-block; padding: 4px 10px; background: var(--cream); color: var(--gold); font-size: 0.8rem; font-weight: 500; margin-top: 16px; }
+
+.pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.pillar { border-top: 2px solid var(--ink); padding-top: 12px; }
+.pillar.mark { border-top-color: var(--garnet); }
+.pillar h4 { font-family: var(--serif); font-size: 1.05rem; margin-bottom: 6px; }
+.pillar p { font-size: 0.88rem; color: var(--stone); }
+
+footer { border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; color: var(--stone); font-size: 0.88rem; }
+body.donor-theme footer { border-top-color: #E3D5BC; }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.pathway { padding: 28px 0; border-top: 1px solid #E3D5BC; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; }
+.pathway:last-child { border-bottom: 1px solid #E3D5BC; }
+.pathway h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 6px; }
+.pathway p { color: var(--stone); font-size: 0.95rem; }
+
+.faq dt { font-family: var(--serif); font-weight: 600; margin-top: 24px; }
+.faq dd { color: var(--stone); margin-top: 6px; }
+
+@media (max-width: 720px) {
+  .rule-list li, .two-col, .stat-strip, .pillars, .pathway { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.1rem; }
+}
+
+/* ---------- Logo image + mobile nav ---------- */
+.logo-mark { width: 32px; height: 32px; background: none; border-radius: 0; object-fit: contain; }
+.logo img.logo-mark { display: block; }
+.nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+header.shrink { box-shadow: 0 2px 10px rgba(33,29,27,0.06); }
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+  header nav { display: none; width: 100%; }
+  header nav.open { display: block; }
+  header nav ul { flex-direction: column; gap: 4px; padding: 12px 0; }
+}
+
+/* ---------- Scroll progress + reveal (no bounce effect) ---------- */
+.scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--garnet); z-index: 999; transition: width 0.1s linear; }
+.reveal-init { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal-init.in-view { opacity: 1; transform: translateY(0); }
+
+/* ---------- Page banners (hero images from uploaded photography) ---------- */
+.page-banner { position: relative; height: 280px; background-size: cover; background-position: center; display: flex; align-items: flex-end; }
+.page-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,29,27,0) 20%, rgba(33,29,27,0.72) 100%); }
+.page-banner .wrap { position: relative; z-index: 1; padding-bottom: 26px; }
+.page-banner h1 { font-family: var(--serif); color: var(--white); font-size: 2.1rem; font-weight: 600; }
+/* min-height, not height: on mobile the h1 wraps to 4 lines and the lede/
+   buttons add more height still, so a fixed height let the hero's own
+   content overflow its box and collide with the section right after it
+   (only the background stopped at 420px; the text and CTA buttons didn't). */
+/* background-size/position/repeat were missing entirely here (unlike the
+   otherwise-identical .page-banner rule above), so the browser fell back
+   to its defaults: size "auto" (the 1600x1800 photo shown at its real
+   pixel size, not scaled to fit) and repeat "repeat" (tiled if the box
+   ever exceeds the image in either dimension). In practice that meant
+   only the image's top-left corner was visible, cropped hard with no
+   scaling -- not a stretch, but a badly wrong, overzoomed crop that
+   reads as "distorted" at a glance, and on some mobile/zoom combinations
+   where the box grows taller than 1800px it would visibly tile. */
+.hero-home-photo { background-image: url('../images/hero-home.jpg'); min-height: 420px; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.hero-home-photo .wrap { color: var(--white); padding-top: 90px; padding-bottom: 46px; }
+.hero-home-photo h1, .hero-home-photo p.lede { color: var(--white); }
+.about-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* ---------- Floating social rail ---------- */
+.social-rail { position: fixed; left: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 900; }
+.social-icon { width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
+.social-icon:hover { background: var(--garnet); }
+@media (max-width: 720px) { .social-rail { display: none; } }
+
+/* ---------- Talk to us floating panel ---------- */
+.talk-launcher { position: fixed; right: 20px; bottom: 20px; z-index: 900; background: var(--garnet); color: var(--white); border: none; padding: 13px 20px; font-weight: 500; font-size: 0.92rem; border-radius: 30px; box-shadow: 0 4px 14px rgba(0,0,0,0.22); cursor: pointer; }
+.talk-launcher:hover { background: var(--garnet-deep); }
+.talk-panel { position: fixed; right: 20px; bottom: 80px; width: 300px; max-width: 86vw; background: var(--white); border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.18); z-index: 900; display: none; flex-direction: column; }
+.talk-panel.open { display: flex; }
+.talk-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--ink); color: var(--white); font-weight: 600; }
+.talk-close { background: none; border: none; color: var(--white); font-size: 1.2rem; cursor: pointer; line-height: 1; }
+.talk-form { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.talk-form label { font-size: 0.82rem; color: var(--stone); display: flex; flex-direction: column; gap: 4px; }
+.talk-form input, .talk-form textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 3px; }
+.talk-note { font-size: 0.74rem; color: var(--stone); }
+.talk-sent { padding: 20px 16px; font-size: 0.92rem; color: var(--ink); }
+
+/* ---------- Donation payment widget ---------- */
+.pay-widget { border: 1px solid var(--line); background: var(--white); max-width: 520px; }
+.pay-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+.pay-tab { flex: 1; min-width: 110px; padding: 13px 10px; font-size: 0.82rem; font-weight: 600; text-align: center; cursor: pointer; border-bottom: 3px solid transparent; color: var(--stone); }
+.pay-tab small { display: block; font-weight: 400; font-size: 0.68rem; opacity: 0.85; }
+.pay-tab.active { color: var(--ink); }
+.pay-tab[data-tab="momo"].active { border-color: linear-gradient(90deg,#E4292E,#2AA454); border-bottom: 3px solid #2AA454; box-shadow: inset 0 -3px 0 0 #E4292E; }
+.pay-tab[data-tab="visa"].active { border-color: #1A1F71; }
+.pay-tab[data-tab="paypal"].active { border-color: #003087; }
+.pay-tab[data-tab="stripe"].active { border-color: #635BFF; }
+.pay-tab[data-tab="paybill"].active { border-color: var(--gold); }
+.pay-tab[data-tab="crypto"].active { border-color: #1f1147; }
+.pay-panel { display: none; padding: 22px; }
+.pay-panel.active { display: block; }
+.pay-form label { display: block; font-size: 0.85rem; color: var(--stone); margin-bottom: 12px; }
+.pay-form input { width: 100%; margin-top: 5px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 3px; font: inherit; }
+.pay-soon { display: inline-block; font-size: 0.72rem; color: var(--gold); background: var(--cream); padding: 3px 8px; margin-left: 6px; border-radius: 3px; }
+.pay-result { margin-top: 10px; font-size: 0.85rem; color: var(--garnet); }
+.momo-brand { background: linear-gradient(90deg,#E4292E 0%,#E4292E 48%,#2AA454 52%,#2AA454 100%); height: 4px; margin-bottom: 14px; border-radius: 2px; }
+
+/* ---------- Blog ---------- */
+.blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.blog-card { border-top: 2px solid var(--garnet); padding-top: 14px; }
+.blog-card .meta { font-size: 0.8rem; color: var(--stone); margin-bottom: 6px; }
+.blog-card h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 8px; }
+.blog-card p { color: var(--stone); font-size: 0.93rem; }
+@media (max-width: 720px) { .blog-grid { grid-template-columns: 1fr; } }

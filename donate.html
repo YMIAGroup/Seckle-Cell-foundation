@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - Sickle Cell Child Care Foundation</title>
+<meta name="description" content="Make a one-time or recurring donation via Mobile Money, Visa/Mastercard, PayPal, Stripe or Paybill.">
+<link rel="canonical" href="https://sicklecellchildcare.org/donate.html">
+<meta property="og:title" content="Donate - Sickle Cell Child Care Foundation">
+<meta property="og:description" content="Make a one-time or recurring donation via Mobile Money, Visa/Mastercard, PayPal, Stripe or Paybill.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/logo.png">
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css"></head>
+<body class="donor-theme">
+<header><div class="wrap header-inner">
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="Sickle Cell Child Care Foundation logo" class="logo-mark">Sickle Cell Child Care Foundation</a>
+  <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  <nav><ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sickle-cell.html">Sickle Cell</a></li>
+    <li><a href="get-help.html">Get Help</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="sponsor.html">Sponsor</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="/portal/login.html">Sign In</a></li>
+    <li><a href="donate.html" class="nav-cta active">Donate</a></li>
+  </ul></nav>
+</div></header>
+
+<div class="page-banner" style="background-image:url('images/banner-donate.jpg');"><div class="wrap"><h1>Donate</h1></div></div>
+
+<section class="first"><div class="wrap two-col">
+  <div>
+    <h2>Every donation is tracked, end to end.</h2>
+    <p class="section-lede">Choose a payment method below. Only methods the Foundation has currently enabled are shown - methods marked <span class="pay-soon">(soon)</span> are visible but not yet connected to a live payment processor. Mobile Money is our most-used channel in Kenya.</p>
+    <p style="color:var(--stone); font-size:0.9rem;">Prefer to talk first? Call <strong>0724 888 057</strong> or <strong>0798 511 366</strong>, or use the "Talk to us" button in the corner of this page.</p>
+  </div>
+
+  <div class="pay-widget">
+    <p class="pay-loading" style="padding:16px 22px; font-size:0.85rem; color:var(--stone);">Loading available payment methods…</p>
+    <div class="pay-tabs">
+      <div class="pay-tab" data-tab="mpesa">Mobile Money<small>(Airtel/Mpesa)</small></div>
+      <div class="pay-tab" data-tab="paybill">Paybill / Till</div>
+      <div class="pay-tab" data-tab="visa">Visa / Mastercard</div>
+      <div class="pay-tab" data-tab="paypal">PayPal</div>
+      <div class="pay-tab" data-tab="stripe">Stripe</div>
+      <div class="pay-tab" data-tab="crypto">Crypto</div>
+    </div>
+
+    <div class="pay-panel" data-panel="mpesa">
+      <div class="momo-brand"></div>
+      <form class="pay-form" data-method="mpesa" data-credential-key="mpesaTill">
+        <label>Phone number (M-Pesa / Airtel Money)
+          <input type="tel" placeholder="07XX XXX XXX" required>
+        </label>
+        <label>Amount (KES)
+          <input type="number" min="1" placeholder="e.g. 1000" required>
+        </label>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send push payment prompt <span class="pay-soon">soon</span></button>
+        <p style="font-size:0.78rem; color:var(--stone); margin-top:10px;">You will receive a PIN prompt on your phone once this is connected to a live Till/Paybill number.</p>
+      </form>
+    </div>
+
+    <div class="pay-panel" data-panel="paybill">
+      <form class="pay-form" data-method="paybill" data-credential-key="paybill">
+        <label>Paybill number <input type="text" value="Not yet assigned" disabled></label>
+        <label>Account reference <input type="text" value="DONATE" disabled></label>
+        <p style="font-size:0.85rem; color:var(--stone);">Once the Foundation's Paybill number is issued, it will appear here with step-by-step instructions. <span class="pay-soon">soon</span></p>
+      </form>
+    </div>
+
+    <div class="pay-panel" data-panel="visa">
+      <form class="pay-form" data-method="card" data-credential-key="visaMerchantId">
+        <label>Card number <input type="text" placeholder="•••• •••• •••• ••••" required></label>
+        <label>Expiry <input type="text" placeholder="MM/YY" required></label>
+        <label>CVV (security check) <input type="text" placeholder="•••" required></label>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Pay securely <span class="pay-soon">soon</span></button>
+      </form>
+    </div>
+
+    <div class="pay-panel" data-panel="paypal">
+      <form class="pay-form" data-method="paypal" data-credential-key="paypalClientId">
+        <p style="color:var(--stone); font-size:0.9rem; margin-bottom:14px;">Donate via your PayPal account.</p>
+        <button type="submit" class="btn btn-primary" style="width:100%; background:#003087; border-color:#003087;">Continue to PayPal <span class="pay-soon">soon</span></button>
+      </form>
+    </div>
+
+    <div class="pay-panel" data-panel="stripe">
+      <form class="pay-form" data-method="stripe" data-credential-key="stripePublishableKey">
+        <label>Card number <input type="text" placeholder="•••• •••• •••• ••••" required></label>
+        <label>Expiry <input type="text" placeholder="MM/YY" required></label>
+        <label>CVC <input type="text" placeholder="•••" required></label>
+        <button type="submit" class="btn btn-primary" style="width:100%; background:#635BFF; border-color:#635BFF;">Pay with Stripe <span class="pay-soon">soon</span></button>
+      </form>
+    </div>
+
+    <div class="pay-panel" data-panel="crypto">
+      <form class="pay-form" data-method="crypto" data-credential-key="cryptoWalletAddress">
+        <label>Currency
+          <select>
+            <option>Bitcoin (BTC)</option>
+            <option>USDT (Tether)</option>
+            <option>Ethereum (ETH)</option>
+          </select>
+        </label>
+        <p style="font-size:0.85rem; color:var(--stone); margin-bottom:14px;">A wallet address and QR code will appear here once the Foundation's crypto donation wallet is configured.</p>
+        <button type="submit" class="btn btn-primary" style="width:100%; background:#1f1147; border-color:#1f1147;">Get wallet address <span class="pay-soon">soon</span></button>
+      </form>
+    </div>
+
+    <p class="pay-empty" hidden style="padding:22px; color:var(--stone); font-size:0.9rem;">No payment methods are currently available online. Please call <strong>0724 888 057</strong> or <strong>0798 511 366</strong>, or use the "Talk to us" button to arrange your donation directly.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="notice">
+    <p>Already have a donor account?</p>
+    <p style="font-weight:400; color:var(--stone);">Sign in to your donor portal to see your giving history and sponsorship updates. <a href="/portal/login.html" style="color:var(--garnet); font-weight:500;">Sign in →</a> or <a href="/portal/signup.html" style="color:var(--garnet); font-weight:500;">create an account →</a></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap footer-inner">
+  <span>© 2026 Sickle Cell Child Care Foundation. Nairobi, Kenya.</span>
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="get-help.html#safeguarding">Report a Safeguarding Concern</a>
+    <a href="resources.html">Resources</a>
+  </div>
+</div></footer>
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/float.js"></script>
+<script src="js/payments.js"></script>
+</body></html>
